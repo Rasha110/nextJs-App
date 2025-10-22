@@ -1,5 +1,6 @@
 import styles from '../styles/Layout.module.css';
 import React, { ReactNode } from "react";
+import  Header  from './Header';
 import Nav from './Nav';
 type LayoutProps = {
   children: ReactNode;
@@ -10,7 +11,9 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   <Nav  />
     <div className={styles.container}>
         <h1>Hi</h1>
-      <main className={styles.main}>{children}</main>
+      <main className={styles.main}>
+        <Header/>
+        {children}</main>
     </div>
     </> );
 };
