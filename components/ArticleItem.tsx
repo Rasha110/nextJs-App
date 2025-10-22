@@ -12,11 +12,11 @@ type ArticleItemProps = {
   article: Article;
 };
 
-const ArticleItem: React.FC<ArticleItemProps> = ({ article }) => {
+const ArticleItem: React.FC<ArticleItemProps>=({article}) => {
   return (
     <Link
       href={`/article/${article.id}`}
-      className={articleStyles.card} // 👈 class directly on Link
+      className={articleStyles.card} 
     >
       <h3>{article.title} &rarr;</h3>
       <p>{article.body}</p>
